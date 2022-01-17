@@ -90,7 +90,10 @@ StyleSheetBuilder::StyleSheetBuilder(const ColorScheme &colors,
     this->m_hoverColor = this->m_pressedColor;
 
     this->m_faintColor = applyAlpha(colors.foreground, colors.background, 30);
-    
+
+    this->m_menuBarForegroundColor = colors.foreground;
+    this->m_menuBarBackgroundColor = colors.background;
+
     this->m_headingColor = colors.headingText.name();
     this->m_codeColor = colors.codeText.name();
     this->m_linkColor = colors.link.name();
@@ -126,6 +129,7 @@ StyleSheetBuilder::StyleSheetBuilder(const ColorScheme &colors,
     buildLayoutStyleSheet();
     buildSidebarStyleSheet();
     buildSidebarWidgetStyleSheet();
+    buildMenubarStyleSheet();
     buildStatusLabelStyleSheet();
     buildHtmlPreviewCss(roundedCorners);
 }
@@ -191,6 +195,11 @@ QString StyleSheetBuilder::sidebarStyleSheet()
 QString StyleSheetBuilder::sidebarWidgetStyleSheet()
 {
     return m_sidebarWidgetStyleSheet;
+}
+
+QString StyleSheetBuilder::menubarStyleSheet()
+{
+    return m_menubarStyleSheet;
 }
 
 QString StyleSheetBuilder::htmlPreviewCss() 
@@ -556,6 +565,28 @@ void StyleSheetBuilder::buildSidebarWidgetStyleSheet()
             << " } "
             << m_scrollBarStyleSheet
             ;
+}
+
+void StyleSheetBuilder::buildMenubarStyleSheet()
+{
+    m_menubarStyleSheet = "";
+
+    QTextStream stream(&m_menubarStyleSheet);
+
+    stream << "* { background-color: "
+           << this->m_menuBarBackgroundColor.name()
+           << "; color: "
+           << this->m_menuBarForegroundColor.name()
+           << "; } "
+           << "QMenuBar::item::selected, QMenu::item::selected { background-color: "
+           << this->m_selectedBgColor.name()
+           << "; color: "
+           << this->m_selectedFgColor.name()
+           << "; } "
+           << "QMenu::separator { background-color: "
+           << this->m_faintColor.name()
+           << "; } "
+           ;
 }
 
 void StyleSheetBuilder::buildHtmlPreviewCss(const bool roundedCorners) 

@@ -1564,6 +1564,8 @@ void MainWindow::applyTheme()
     findReplace->setStyleSheet(styler.findReplaceStyleSheet());
     sidebar->setStyleSheet(styler.sidebarStyleSheet());
 
+    this->menuBar()->setStyleSheet(styler.menubarStyleSheet());
+
     // Clear style sheet cache by setting to empty string before
     // setting the new style sheet.
     //

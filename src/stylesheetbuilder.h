@@ -102,6 +102,11 @@ public:
     QString sidebarWidgetStyleSheet();
 
     /**
+     * Gets the menu bar style sheet.
+     */
+    QString menubarStyleSheet();
+
+    /**
      * Gets the CSS style sheet for display in the HTML live preview.
      */
     QString htmlPreviewCss();
@@ -147,6 +152,7 @@ private:
     QString m_findReplaceStyleSheet;
     QString m_sidebarStyleSheet;
     QString m_sidebarWidgetStyleSheet;
+    QString m_menubarStyleSheet;
     static QString m_htmlPreviewSass;
     QString m_htmlPreviewCss;
     QFont m_htmlPreviewTextFont;
@@ -162,6 +168,7 @@ private:
     void buildFindReplaceStyleSheet();
     void buildSidebarStyleSheet();
     void buildSidebarWidgetStyleSheet();
+    void buildMenubarStyleSheet();
     void buildHtmlPreviewCss(const bool roundedCorners);
 
     /**
