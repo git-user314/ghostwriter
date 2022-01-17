@@ -296,7 +296,7 @@ QVersionNumber ExporterFactoryPrivate::isCommandAvailable(const QString &command
     if (!process.waitForStarted(500)) {
         qWarning() << "Command" << command << "is not available.";
         return QVersionNumber();
-    } else if (!process.waitForFinished(500)) {
+    } else if (!process.waitForFinished(1500)) {
         qCritical() << command << "process timed out and cannot be used.";
         process.kill();
         return QVersionNumber();
