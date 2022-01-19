@@ -188,6 +188,7 @@ void ThemeEditorDialogPrivate::addColorsToLayout(QGridLayout *layout)
     addColorRowToLayout(layout, ++row, QObject::tr("Heading"),    { &lightColors.headingText,    &darkColors.headingText    });
     addColorRowToLayout(layout, ++row, QObject::tr("Emphasis"),   { &lightColors.emphasisText,   &darkColors.emphasisText   });
     addColorRowToLayout(layout, ++row, QObject::tr("Block Text"), { &lightColors.blockquoteText, &darkColors.blockquoteText });
+    addColorRowToLayout(layout, ++row, QObject::tr("Code Bg"),    { &lightColors.codeBg,         &darkColors.codeBg         });
     addColorRowToLayout(layout, ++row, QObject::tr("Link"),       { &lightColors.link,           &darkColors.link           });
     addColorRowToLayout(layout, ++row, QObject::tr("Error"),      { &lightColors.error,          &darkColors.error          });
 }
