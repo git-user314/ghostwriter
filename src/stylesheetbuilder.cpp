@@ -93,6 +93,7 @@ StyleSheetBuilder::StyleSheetBuilder(const ColorScheme &colors,
     
     this->m_headingColor = colors.headingText.name();
     this->m_codeColor = colors.codeText.name();
+    this->m_codeBgColor = m_faintColor;
     this->m_linkColor = colors.link.name();
     this->m_blockquoteColor = colors.blockquoteText.name();
     this->m_thickBorderColor = colors.emphasisMarkup.name();
@@ -595,6 +596,7 @@ void StyleSheetBuilder::buildHtmlPreviewCss(const bool roundedCorners)
     m_htmlPreviewCss = m_htmlPreviewCss.replace("$faintColor", m_faintColor.name());
     m_htmlPreviewCss = m_htmlPreviewCss.replace("$blockBackground", m_faintColor.name());
     m_htmlPreviewCss = m_htmlPreviewCss.replace("$codeColor", m_codeColor.name());
+    m_htmlPreviewCss = m_htmlPreviewCss.replace("$codeBgColor", m_codeBgColor.name());
     m_htmlPreviewCss = m_htmlPreviewCss.replace("$linkColor", m_linkColor.name());
     m_htmlPreviewCss = m_htmlPreviewCss.replace("$blockquoteColor", m_blockquoteColor.name());
     m_htmlPreviewCss = m_htmlPreviewCss.replace("$thickBorderColor", m_thickBorderColor.name());

@@ -133,6 +133,7 @@ private:
     QColor m_menuBarBackgroundColor;
     QColor m_headingColor;
     QColor m_codeColor;
+    QColor m_codeBgColor;
     QColor m_linkColor;
     QColor m_blockquoteColor;
     QColor m_thickBorderColor;
