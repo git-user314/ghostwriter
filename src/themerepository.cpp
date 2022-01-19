@@ -373,6 +373,7 @@ void ThemeRepositoryPrivate::loadClassicTheme()
     lightColors.blockquoteMarkup = "#bdc3c7";
     lightColors.codeText = "#31363b";
     lightColors.codeMarkup = "#bdc3c7";
+    lightColors.codeBg = "#bdc3c7";
     lightColors.image = "#3DAEE9";
     lightColors.listMarkup = "#bdc3c7";
     lightColors.inlineHtml = "#bdc3c7";
@@ -393,6 +394,7 @@ void ThemeRepositoryPrivate::loadClassicTheme()
     darkColors.blockquoteMarkup = "#575b5f";
     darkColors.codeText = "#bdc3c7";
     darkColors.codeMarkup = "#575b5f";
+    darkColors.codeBg = "#000000";
     darkColors.image = "#3DAEE9";
     darkColors.listMarkup = "#575b5f";
     darkColors.inlineHtml = "#575b5f";
@@ -427,6 +429,7 @@ void ThemeRepositoryPrivate::loadPlainstractionTheme()
     lightColors.blockquoteMarkup = "#c4e4f1";
     lightColors.codeText = "#009bc8";
     lightColors.codeMarkup = "#c4e4f1";
+    lightColors.codeBg = "#c4e4f1";
     lightColors.image = "#c23184";
     lightColors.listMarkup = "#009bc8";
     lightColors.inlineHtml = "#c4e4f1";
@@ -447,6 +450,7 @@ void ThemeRepositoryPrivate::loadPlainstractionTheme()
     darkColors.blockquoteMarkup = "#074051";
     darkColors.codeText = "#009bc8";
     darkColors.codeMarkup = "#074051";
+    darkColors.codeBg = "#000000";
     darkColors.image = "#b31771";
     darkColors.listMarkup = "#009bc8";
     darkColors.inlineHtml = "#074051";
@@ -487,6 +491,7 @@ bool ThemeRepositoryPrivate::loadColorsFromJsonObject(const QJsonObject &obj, Co
     colors.blockquoteMarkup = colors.emphasisMarkup;
     colors.divider = colors.emphasisMarkup;
     colors.codeText = colors.blockquoteText;
+    colors.codeBg = colors.background;
     colors.image = colors.link;
 
     return valid;

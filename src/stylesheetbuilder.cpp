@@ -93,7 +93,7 @@ StyleSheetBuilder::StyleSheetBuilder(const ColorScheme &colors,
     
     this->m_headingColor = colors.headingText.name();
     this->m_codeColor = colors.codeText.name();
-    this->m_codeBgColor = m_faintColor;
+    this->m_codeBgColor = colors.codeBg.name();
     this->m_linkColor = colors.link.name();
     this->m_blockquoteColor = colors.blockquoteText.name();
     this->m_thickBorderColor = colors.emphasisMarkup.name();
