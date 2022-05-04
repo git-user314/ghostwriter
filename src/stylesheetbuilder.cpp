@@ -585,6 +585,7 @@ void StyleSheetBuilder::buildMenubarStyleSheet()
            << "; } "
            << "QMenu::separator { background-color: "
            << this->m_faintColor.name()
+           << "; height: 1px; margin-left: 13px"
            << "; } "
            ;
 }
