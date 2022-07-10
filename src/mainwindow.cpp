@@ -300,7 +300,7 @@ MainWindow::MainWindow(const QString &filePath, QWidget *parent)
     connect(outlineWidget, SIGNAL(headingNumberNavigated(int)), htmlPreview, SLOT(navigateToHeading(int)));
     connect(appSettings, SIGNAL(currentHtmlExporterChanged(Exporter *)), htmlPreview, SLOT(setHtmlExporter(Exporter *)));
 
-    htmlPreview->setMinimumWidth(0.1 * qApp->primaryScreen()->size().width());
+    htmlPreview->setMinimumWidth(2);
     htmlPreview->setObjectName("htmlpreview");
     htmlPreview->setVisible(appSettings->htmlPreviewVisible());
 
