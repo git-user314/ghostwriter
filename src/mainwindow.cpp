@@ -93,7 +93,7 @@ MainWindow::MainWindow(const QString &filePath, QWidget *parent)
     MarkdownDocument *document = new MarkdownDocument();
 
     editor = new MarkdownEditor(document, theme.lightColorScheme(), this);
-    editor->setMinimumWidth(0.1 * qApp->primaryScreen()->size().width());
+    editor->setMinimumWidth(2);
     editor->setFont(appSettings->editorFont().family(), appSettings->editorFont().pointSize());
     editor->setUseUnderlineForEmphasis(appSettings->useUnderlineForEmphasis());
     editor->setEnableLargeHeadingSizes(appSettings->largeHeadingSizesEnabled());
@@ -1519,7 +1519,7 @@ void MainWindow::adjustEditor()
         sidebarWidth = this->sidebar->width();
     }
 
-    this->htmlPreview->setMaximumWidth((width - sidebarWidth) / 2);
+    this->htmlPreview->setMaximumWidth(width - sidebarWidth);
 
     // Resize the editor's margins.
     this->editor->setupPaperMargins();
