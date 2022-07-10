@@ -541,6 +541,16 @@ void MainWindow::toggleHtmlPreview(bool checked)
     htmlPreview->updatePreview();
 
     htmlPreviewMenuAction->blockSignals(false);
+
+    // Set preview to use half of the editors width.
+    QList<int> sizes;
+    int sidebarWidth = this->sidebar->width(); // Keep sidebar width as it is.
+    int otherWidth = (this->width() - sidebarWidth) / 2;
+    sizes.append(sidebarWidth);
+    sizes.append(otherWidth);
+    sizes.append(otherWidth);
+    splitter->setSizes(sizes);
+
     appSettings->setHtmlPreviewVisible(checked);
     this->update();
     adjustEditor();
