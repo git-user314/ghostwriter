@@ -113,6 +113,8 @@ namespace ghostwriter
  *      text heading color used in HTML preview
  * $code-color
  *      code color used in HTML preview
+ * $code-background-color
+ *      code background color used in HTML preview
  * $block-quote-color
  *      block quote color used in HTML preview
  * $grid-color
