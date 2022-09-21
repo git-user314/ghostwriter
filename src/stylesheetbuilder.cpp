@@ -127,7 +127,7 @@ StyleSheetBuilder::StyleSheetBuilder(const ColorScheme &colors,
     m_styleSheetVariables["$link-color"] = colors.link.name();
     m_styleSheetVariables["$heading-color"] = colors.headingText;
     m_styleSheetVariables["$code-color"] = colors.codeText;
-    m_styleSheetVariables["$code-background-color"] = colors.background;
+    m_styleSheetVariables["$code-background-color"] = colors.codeBackground;
     m_styleSheetVariables["$block-quote-color"] = colors.blockquoteText;
     m_styleSheetVariables["$separator-color"] = colors.emphasisMarkup;
 

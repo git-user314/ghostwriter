@@ -42,6 +42,7 @@ typedef struct ColorScheme {
     QColor listMarkup;
     QColor codeText;
     QColor codeMarkup;
+    QColor codeBackground;
     QColor error;
 } ColorScheme;
 } // namespace ghostwriter

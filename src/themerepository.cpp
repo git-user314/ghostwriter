@@ -373,6 +373,7 @@ void ThemeRepositoryPrivate::loadClassicTheme()
     lightColors.blockquoteMarkup = "#bdc3c7";
     lightColors.codeText = "#31363b";
     lightColors.codeMarkup = "#bdc3c7";
+    lightColors.codeBackground = "#eff0f1";
     lightColors.image = "#3DAEE9";
     lightColors.listMarkup = "#bdc3c7";
     lightColors.inlineHtml = "#bdc3c7";
@@ -393,6 +394,7 @@ void ThemeRepositoryPrivate::loadClassicTheme()
     darkColors.blockquoteMarkup = "#575b5f";
     darkColors.codeText = "#bdc3c7";
     darkColors.codeMarkup = "#575b5f";
+    darkColors.codeBackground = "#000000";
     darkColors.image = "#3DAEE9";
     darkColors.listMarkup = "#575b5f";
     darkColors.inlineHtml = "#575b5f";
